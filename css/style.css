@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    height: 50px;
+}
+.top-header .social-icons{
+    display: flex;
+    align-items: center;
+    background-color: #F59E1A;
+    height: 100%;
+    padding-left: 10px;
+    width: 30%;
+}
