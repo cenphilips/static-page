@@ -33,15 +33,38 @@ body{
 .small-social .small-social-top{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;          /* replaced space-between with space-around */
     width: 100%;
+    gap: 14rem;                             /* added gap property with the value of 15rem */
 }
 .small-social .small-social-top .icon{
-    width: 100px;
+    width: 130px;
+    padding-top: 10px;                      /* added padding top of 10px */
 }
 .small-social .small-social-top .icon img{
     width: 100%;
 }
+
+.small-social .small-social-top .search-menu ul{
+ display: flex;
+ list-style: none;
+ align-items: center;
+ gap: 1.5rem;
+}
+
+.search-menu ul li#search{
+    font-size: 1.25rem;
+}
+
+.search-menu ul li#list{
+    font-size: 2rem;
+}
+
+.search-menu ul li a{
+    text-decoration: none;
+    color: #19232b;
+}
+
 .small-social .small-social-bottom{
     display: none;
 }
