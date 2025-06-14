@@ -9,12 +9,7 @@
 body{
     font-family: 'Poppins';
 }
-.top-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-}
+
 .top-header .social-icons{
     display: none;
 }
@@ -68,14 +63,23 @@ body{
 .small-social .small-social-bottom{
     display: none;
 }
+.main-header{
+    display: none;
+}
 
 @media screen and (min-width: 1000px) {
+    .top-header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+    }
     .top-header .social-icons{
         display: flex;
         align-items: center;
+        justify-content: center;
         background-color: #F59E1A;
         height: 100%;
-        padding-left: 10px;
         width: 30%;
         column-gap: 0.6rem;
     }
@@ -103,10 +107,9 @@ body{
         align-items: center;
         background-color: #116E63;
         height: 100%;
-        padding-right: 10px;
         width: 70%;
         column-gap: 1.5rem;
-        justify-content: flex-end;
+        justify-content: center;
     }
     .top-header .contact-info div{
         color: white;
@@ -131,4 +134,35 @@ body{
     .small-social{
         display: none;
     }
+    .main-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        padding-left: 88px;
+        padding-right: 180px;
+    }
+    .main-header .logo{
+        width: 130px;
+    }
+    .main-header .logo img{
+        width: 100%;
+    }
+    .main-header .main-menu{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .main-header .main-menu ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+
+
 }
