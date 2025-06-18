@@ -77,11 +77,12 @@ body{
     .top-header .social-icons{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         background-color: #F59E1A;
         height: 100%;
         width: 30%;
         column-gap: 0.6rem;
+        padding-left: 20px;
     }
     .top-header .social-icons p{
         margin: 0;
@@ -109,7 +110,8 @@ body{
         height: 100%;
         width: 70%;
         column-gap: 1.5rem;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: 20px;
     }
     .top-header .contact-info div{
         color: white;
@@ -139,8 +141,9 @@ body{
         align-items: center;
         justify-content: space-between;
         height: 100px;
-        padding-left: 88px;
-        padding-right: 180px;
+        padding-left: 20px;
+        padding-right: 20px;
+        column-gap: 5rem;
     }
     .main-header .logo{
         width: 130px;
@@ -149,11 +152,12 @@ body{
         width: 100%;
     }
     .main-header .main-menu{
-        width: 50%;
+        width: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 2rem;
+        height: 100%;
     }
     .main-header .main-menu ul{
         display: flex;
@@ -162,7 +166,46 @@ body{
         justify-content: space-between;
         gap: 1.5rem;
     }
-
-
+    .main-header .main-menu ul li a{
+        color: #000;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header .main-menu ul li a span{
+        margin-left: 5px;
+        font-size: 13px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .main-header .main-menu .search{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        height: 100%;
+    }
+    .main-header .main-menu .search a{
+        text-decoration: none;
+        font-size: 18px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .main-header .main-menu .search button{
+        padding: 20px 25px;
+        border-radius: 25px 25px 25px 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        background-color: #F59E1A;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    .main-header .main-menu .search button:hover{
+        background-color: #116E63;
+        transition: background-color 2s;
+    }
 
 }
