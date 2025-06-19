@@ -66,6 +66,22 @@ body{
 .main-header{
     display: none;
 }
+.floating-menu{
+    display: none;
+}
+.banner{
+    background-image: url("../images/background/slider-2.jpg");
+    height: 600px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+.banner .banner-container{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    padding-left: 20px;
+}
 
 @media screen and (min-width: 1000px) {
     .top-header{
@@ -145,6 +161,11 @@ body{
         padding-left: 20px;
         padding-right: 20px;
         column-gap: 5rem;
+        position: relative;
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #fff;
     }
     .main-header .logo{
         width: 130px;
@@ -207,6 +228,31 @@ body{
     .main-header .main-menu .search button:hover{
         background-color: #116E63;
         transition: background-color 2s;
+    }
+    .home{
+        display: none;
+        position: absolute;
+        width: 220px;
+        background-color: #116E63;
+        color: #fff;
+        top: 100px;
+        left: 250px;
+        border-top: 3px solid #F59E1A;
+    }
+    .home ul {
+        list-style: none;
+    }
+    .home ul li{
+        border-bottom: 1px solid #418B82;
+        padding: 10px 25px;
+    }
+    .home ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+    }
+    a#home:hover + .home{
+        display: block;
     }
 
 }
