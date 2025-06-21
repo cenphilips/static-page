@@ -10,6 +10,22 @@ body{
     font-family: 'Poppins';
 }
 
+.big-button{
+    padding: 18px 25px;
+    border-radius: 25px 25px 25px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #F59E1A;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+}
+
+.big-button:hover{
+    background-color: #116E63;
+    color: #fff;
+}
+
 .top-header .social-icons{
     display: none;
 }
@@ -71,17 +87,64 @@ body{
 }
 .banner{
     background-image: url("../images/background/slider-2.jpg");
-    height: 600px;
-    background-position: top;
+    height: 46.5rem;
+    background-position: center -4.9rem;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
 }
 .banner .banner-container{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
-    padding-left: 20px;
+    padding-left: 5.5rem;
+    padding-top: 9rem;
 }
+
+.banner .banner-container div{
+    width: 690px;
+}
+
+.banner .banner-container div h4{
+    color: #F59E1A;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid #F59E1A;
+    width: fit-content;
+}
+
+.banner .banner-container div h1{
+    font-size: 4rem;
+    line-height: 1.12;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.banner .banner-container h1 span{
+    color: #F59E1A;
+}
+
+.banner .banner-container p{
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.banner .banner-container .banner-buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 35px;
+}
+
+.banner .banner-container .banner-buttons #white-bg{
+    background-color: #fff;
+    color: #000;
+}
+
+.banner .banner-container .banner-buttons #white-bg:hover{
+    background-color: #116E63;
+    color: #fff;
+}
+
 
 @media screen and (min-width: 1000px) {
     .top-header{
@@ -215,20 +278,8 @@ body{
         display: flex;
         align-items: flex-start;
     }
-    .main-header .main-menu .search button{
-        padding: 20px 25px;
-        border-radius: 25px 25px 25px 0;
-        text-transform: uppercase;
-        font-weight: 600;
-        background-color: #F59E1A;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
-    .main-header .main-menu .search button:hover{
-        background-color: #116E63;
-        transition: background-color 2s;
-    }
+
+
     .home{
         display: none;
         position: absolute;
