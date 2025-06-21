@@ -87,8 +87,8 @@ body{
 }
 .banner{
     background-image: url("../images/background/slider-2.jpg");
-    height: 690px;
-    background-position: center -4.9rem;
+    height: 700px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
@@ -96,8 +96,10 @@ body{
 .banner .banner-container{
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
-    padding-left: 5.5rem;
-    padding-top: 9rem;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .banner .banner-container div{
