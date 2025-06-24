@@ -146,20 +146,29 @@ body{
     background-color: #116E63;
     color: #fff;
 }
-
+.outside-banner{
+    position: relative;
+    height: 850px;
+    background-color: #F6F6F6;
+}
 .choices{
     display: flex;
     justify-content: flex-end;
     gap: 1.5rem;
     margin-right: 1.5rem;
+    position: absolute;
+    /* background-color: red; */
+    width: 100%;
+    z-index: 1;
+    bottom: 0
 }
 
 .choice-item{
     width: 190px;
-    /* height: 250px; */
     padding: 20px;
     border-radius: 60px 60px 60px 0;
-    box-shadow: 0.5em 0.5em 0.9em #7f7f7f;
+    /* box-shadow: 0.5em 0.5em 0.9em #7f7f7f; */
+    background-color: #fff;
 }
 
 .choice-icon{
@@ -191,11 +200,60 @@ body{
     font-size: 19.6px;
     line-height: 22px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .choice-text p{
     font-size: 16px;
     line-height: 25px;
+    color: #000;
+}
+.about-us{
+    display: flex;
+    padding: 70px 20px 30px 20px;
+    background-color: #F6F6F6;
+}
+.about-left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50%;
+    gap: 1rem;
+}
+.about-left .img1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: red;
+}
+.about-left .img1 img{
+    width: 250px;
+    border-radius: 80px 80px 0 80px;
+}
+.about-left .img2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: green;
+}
+.about-left .img2 .img2-container{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 2px dashed #F59E1A;
+    padding: 10px;
+}
+.about-left .img2 .img2-container img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+.about-left .img3{
+    grid-column: 2/3;
+    grid-row: 2/4;
+    width: 250px;
+    background-color: orange;
+}
+.about-left .img3 img{
+    width: 100%;
+    border-radius: 0 80px 80px 80px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -276,11 +334,11 @@ body{
         padding-left: 20px;
         padding-right: 20px;
         column-gap: 5rem;
-        position: relative;
         position: sticky;
         top: 0;
         left: 0;
         background-color: #fff;
+        z-index: 10;
     }
     .main-header .logo{
         width: 130px;
