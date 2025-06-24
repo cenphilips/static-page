@@ -309,7 +309,7 @@ body{
         gap: 0.3rem;
         align-items: center;
         border-right: 1px solid #418B82;
-        padding-right: 1.5rem;
+        padding-right: 1rem;
     }
     .top-header .contact-info div:last-child{
         border-right: none;
