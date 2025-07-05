@@ -504,7 +504,8 @@ body{
     padding: 80px 20px;
 }
 .ft-about{
-    width: 650px;
+    width: 680px;
+    font-size: 15px;
 }
 .ft-about .ft-about-img img{
     width: 200px;
@@ -533,7 +534,8 @@ body{
     color: #fff;
 }
 .ft-links{
-    width: 300px;
+    width: 270px;
+    font-size: 15px;
 }
 .ft-links h4{
     border-bottom: 3px solid #d3d3d3;
@@ -565,6 +567,95 @@ body{
 .ft-links ul li a{
     text-decoration: none;
     color: #fff;
+}
+
+.ft-campus{
+    width: 380px;
+    font-size: 15px;
+}
+
+.ft-campus h4{
+    border-bottom: 3px solid #d3d3d3;
+    display: inline;
+    padding-bottom: 15px;
+}
+
+.ft-campus ul{
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.ft-campus ul li{
+    line-height: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-items: center; */
+}
+
+.ft-campus ul li span{
+    margin-right: 5px;
+    color: #F59E1A;
+    display: flex;
+    align-items: center;
+}
+.ft-campus ul li span i{
+    display: flex;
+    align-items: flex-start;
+}
+.ft-campus ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.ft-newsletter{
+    width: auto;
+}
+
+.ft-newsletter h4{
+    border-bottom: 3px solid #d3d3d3;
+    display: inline;
+    padding-bottom: 15px;
+}
+
+.ft-newsletter div{
+    margin: 30px 0;
+    width: 250px;
+}
+
+.ft-newsletter div p{
+    font-size: 15px;
+}
+
+.ft-newsletter .form{
+    width: 290px;
+}
+
+.ft-newsletter .form input{
+    width: 88%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.ft-newsletter .form button{
+    width: 100%;
+    height: 50px;
+    padding: 20px 25px;
+    border-radius: 25px 25px 25px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #F59E1A;
+    color: #fff;
+    border: none;
+    cursor: pointer; 
+}
+
+.ft-newsletter .form button span{
+    padding-left: 5px;
 }
 
 .ft-bottom{
