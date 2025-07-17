@@ -8,8 +8,14 @@
 function add(){
     let x = 10;
     let y = 20;
-    let sum = x + y;
-    return sum;
+    return x + y;
 }
 let sum = add()
 console.log(sum)
+
+function addNum(x, y){
+    return x + y;
+}
+let sum1 = addNum(10, 20)
+console.log(sum1)
+
