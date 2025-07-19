@@ -3,7 +3,7 @@ function checkNum(x, y){
     return x === y
 }
 let check = checkNum(16, 10);
-console.log(check)
+//console.log(check)
 
 function printNum(){
     for(let i = 1; i <= 10; i++){
@@ -21,4 +21,14 @@ function printEven(s, e){
     }
 }
 
-printEven(10, 50)
+//printEven(10, 50)
+
+function printOdd(s, e){
+    for(let i = s; i <= e; i++){
+        if(i % 2 === 1){
+            console.log(i)
+        }      
+    }
+}
+
+printOdd(1, 20)
