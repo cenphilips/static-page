@@ -32,3 +32,5 @@ function printOdd(s, e){
 }
 
 printOdd(1, 20)
+
+//FIZZ BUZZ
