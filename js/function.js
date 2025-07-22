@@ -52,21 +52,21 @@ function exponentNum(x, y){
     let exponent= exponentNum(3, 2)
     //console.log(exponent)
 
-    function fizzbuzz(s, e){
-        for(let i=s; i<=e; i++){
-            if(i%15 === 0){
-                console.log("FIZZBUZZ")
-            }
-            else if(i%5 === 0){
-                console.log("BUZZ")
-            }
-            else if(i%3 === 0){
-                console.log("FIZZ")
-            }
-            else{
-                console.log(i)
-            }
+function fizzbuzz(s, e){
+    for(let i=s; i<=e; i++){
+        if(i%15 === 0){
+            console.log("FIZZBUZZ")
+        }
+        else if(i%5 === 0){
+            console.log("BUZZ")
+        }
+        else if(i%3 === 0){
+            console.log("FIZZ")
+        }
+        else{
+            console.log(i)
         }
     }
+}
 
-    fizzbuzz(1, 100)
+fizzbuzz(1, 100)

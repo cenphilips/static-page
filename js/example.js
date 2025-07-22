@@ -31,6 +31,76 @@ function printOdd(s, e){
     }
 }
 
-printOdd(1, 20)
+// printOdd(1, 20)
 
-//FIZZ BUZZ
+function checkChar(str, char){
+    // for(let i = 0; i < str.length; i++){
+    //     if(str[i] === char){
+    //         return "Found"
+    //     }
+    // }
+    let i = 0
+    while(i < str.length){
+        if(str[i] === char){
+            return i
+        }
+        i++;
+    }
+    return -1
+}
+
+// console.log(checkChar("Hello", "l"))
+
+function getAllChar(str, char){
+    let i = 0;
+    let index = [];
+    while(i < str.length){
+        if(str[i] === char){
+            index.push(i)
+        }
+        i++;
+    }
+    return index;
+}
+
+// console.log(getAllChar("Hello", "k"))
+
+function compareString(str1, str2){
+    if(str1.length !== str2.length){
+        return false
+    }
+    let i = 0;
+    while(i < str1.length){
+        if(str1[i] !== str2[i]){
+            return false
+        }
+        i++;
+    }
+    return true;
+}
+
+// console.log(compareString("Hello", "Hellol"))
+
+// let str1 = "Hello world"
+// let str2 = str1
+// console.log(str1)
+// console.log(str2)
+
+function copyString(str){
+    let newStr = "";
+    let i = 0
+    while (i < str.length){
+        if(str[i] === 'o'){
+            newStr += '0'
+        }else if(str[i] === 'e'){
+            newStr += '3'
+        }
+        else{
+            newStr += str[i]
+        }
+        i++;
+    }
+    return newStr;
+}
+
+console.log(copyString("Hello world"))
