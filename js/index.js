@@ -41,8 +41,8 @@ console.log(k)
 console.log(lastname.slice(3, 5))
 
 console.log(firstname.toUpperCase())
-let name = "    NewName   "
-console.log(name.trim())
+let myName = "    NewName   "
+console.log(myName.trim())
 
 console.log(firstname.repeat(2))
 

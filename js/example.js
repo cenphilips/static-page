@@ -103,4 +103,17 @@ function copyString(str){
     return newStr;
 }
 
-console.log(copyString("Hello world"))
+//console.log(copyString("Hello world"))
+
+
+function reversedString(str){   
+    let newStr = "";
+    let i = str.length-1
+    while (i >=0 ){
+        newStr += str[i]
+        i--;
+    }
+    return newStr;
+}
+
+console.log(reversedString("Tunde Ednut"))
