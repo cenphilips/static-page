@@ -116,4 +116,47 @@ function reversedString(str){
     return newStr;
 }
 
-console.log(reversedString("Tunde Ednut"))
+//console.log(reversedString("TundeEdnut"))
+
+/**
+ * x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ * len = 10
+ * k = 4
+ */
+
+function binarySearch(x, k){
+    let s = 0;
+    let e = x.length-1;
+    while(s <= e){
+        let mid = Math.floor((s+e)/2)
+        if(x[mid] === k){
+            return mid
+        }else if(k > x[mid]){
+            s = mid + 1
+        }else{
+            e = mid - 1
+        }
+    }
+    return -1
+}
+let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let k = 0
+// console.log(binarySearch(x, k))
+
+// recursion
+function factorial(n){
+    if(n === 0){
+        return 1
+    }
+    return n * factorial(n-1)
+}
+/**
+ * factorial(5) = 5 * factorial(4) = 5 * 24 = 120
+ * factorial(4) = 4 * factorial(3) = 4 * 6 = 24
+ * factorial(3) = 3 * factorial(2) = 3 * 2 = 6
+ * factorial(2) = 2 * factorial(1) = 2 * 1 = 2
+ * factorial(1) = 1 * factorial(0) = 1 * 1 = 1
+ * factorial(0) = 1
+ */
+
+console.log(factorial(8))
