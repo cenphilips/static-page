@@ -105,19 +105,6 @@ function copyString(str){
 
 //console.log(copyString("Hello world"))
 
-
-function reversedString(str){   
-    let newStr = "";
-    let i = str.length-1
-    while (i >=0 ){
-        newStr += str[i]
-        i--;
-    }
-    return newStr;
-}
-
-//console.log(reversedString("TundeEdnut"))
-
 /**
  * x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
  * len = 10
@@ -159,23 +146,4 @@ function factorial(n){
  * factorial(0) = 1
  */
 
-// console.log(factorial(8))
-
-function recBinarySearch(x, k, s, e){
-    if(s > e){
-        return -1
-    }
-    let mid = Math.floor((s+e)/2)
-    if(x[mid] === k){
-        return mid
-    }
-    else if(k > x[mid]){
-        return recBinarySearch(x, k, mid+1, e)
-    }
-    else{
-        return recBinarySearch(x, k, s, mid-1)
-    }
-}
-let j = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-let l = 6
-console.log(recBinarySearch(j, l, 0, j.length-1))
+console.log(factorial(8))
