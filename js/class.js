@@ -1,5 +1,5 @@
 
-class Car{
+export class Car{
     constructor(name, color, price){
         this.name = name;
         this.color = color;
@@ -51,3 +51,30 @@ car2.drive()
 // create a class of Account
 // properties - name, balance, accountNumber
 // methods - deposit, withdraw, checkBalance
+
+export class Account{
+    constructor(name, accountNumber, balance){
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.withdrawalDate = new Date();
+        this.depositDate = new Date();
+    }
+
+    deposite(amount){
+        this.balance += amount;
+        this.depositDate = new Date();
+        console.log(`Deposited ${amount} into ${this.name} account`)
+    }
+
+    withdraw(amount){
+        if(this.balance < amount){
+            console.log("Insufficient balance")
+            return;
+        }
+        this.balance -= amount;
+        this.withdrawalDate = new Date();
+        console.log(`Withdrawn ${amount} from ${this.name} account`)
+    }
+
+}
