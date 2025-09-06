@@ -1,4 +1,5 @@
 import { Account, Car, Author } from "./class.js";
+import { Human, Dog } from "./Animal.js";
 
 let account1 = new Account("Ikenna", 1234567890, 1000000);
 account1.deposite(500000)
@@ -19,3 +20,15 @@ author1.write("Home Coming");
 
 author1.publish()
 author1.read("Ije Uwa")
+
+let human1 = new Human("Ikenna", "Black", 25, "Igbo")
+human1.talk()
+human1.walk()
+human1.eat()
+human1.sleep()
+
+let dog1 = new Dog("Max", "White", 5, "German Shepherd")
+dog1.bark()
+dog1.walk()
+dog1.eat()
+dog1.sleep()
