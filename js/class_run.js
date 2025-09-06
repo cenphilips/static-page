@@ -1,4 +1,4 @@
-import { Account, Car } from "./class.js";
+import { Account, Car, Author } from "./class.js";
 
 let account1 = new Account("Ikenna", 1234567890, 1000000);
 account1.deposite(500000)
@@ -13,3 +13,9 @@ car1.stop()
 //Author class
 //properties - name, books[], age, country
 //methods - write, read, publish
+
+let author1= new Author("Philip", 45, "Nigeria", ["Time Travel","Never Again"])
+author1.write("Home Coming");
+
+author1.publish()
+author1.read("Ije Uwa")

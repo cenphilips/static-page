@@ -78,3 +78,33 @@ export class Account{
     }
 
 }
+
+//Author class
+//properties - name, books[], age, country
+//methods - write, read, publish
+
+export class Author {
+    constructor(name, age, country, books= []){
+        this.name=name;
+        this.age=age;
+        this.country=country;
+        this.books= books;
+    }
+
+    write(bookTitle){
+        this.books.push(bookTitle);
+        console.log(`\nName: ${this.name}\nAge: ${this.age}\nCountry: ${this.country}\nBooks: ${bookTitle}`)
+    }
+    read(material){
+        if(material){
+            console.log(`${this.name} is reading "${material}"`)
+        }
+        else{
+            console.log(`${this.name} is reading`)
+        }
+    }
+    publish(){
+        console.log(`\nName: ${this.name}\nAge: ${this.age}\nCountry: ${this.country}\nBooks: ${this.books}\n`)
+    }
+    
+}
