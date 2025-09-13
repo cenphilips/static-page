@@ -15,3 +15,10 @@ Person.address = "123 Main Street"
 for(let key in Person){
     console.log(`${key}: ${Person[key]}`)
 }
+let jsonPerson = JSON.stringify(Person)
+console.log(jsonPerson)
+
+//desctructuring
+let { name, age, gender } = Person;
+console.log(name)
+console.log(age)
