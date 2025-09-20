@@ -23,4 +23,26 @@ function palindrome(string){
     return 'It is a palindrome'
 }
 
-console.log(palindrome('palindromeemordnilap'))
+//console.log(palindrome('palindromeemordnilap'))
+
+const myNumbers = [4, 1, -2, 7, 16, 9, -6]
+
+function evenNum(numbers, callback){
+    const myArray = []
+    for(const x of numbers){
+        if(callback(x)){
+            myArray.push(x)
+        }
+    }
+    return myArray;
+}
+
+const isEven = function(a){
+    return a % 2===0
+}
+
+// const isEven = (a) => a%2 === 0
+
+const evenNumbers = evenNum(myNumbers, isEven)
+console.log(evenNumbers)
+
