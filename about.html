@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let h1 = document.createElement("h1")
+        h1.setAttribute('id', "heading")
+        document.body.appendChild(h1)
+        h1.onclick = function (){
+            alert("The heading was clicked!")
+        }
+        document.getElementById('heading').innerHTML = "This is my heading";
+        let para = document.getElementById('demo');
+        para.innerHTML = "Welcome to JS DOM";
+        para.style.backgroundColor = 'red';
+        para.style.padding = "20px"
+        document.write("Hello, world")
+    </script>
+</body>
+</html>
