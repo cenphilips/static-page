@@ -75,3 +75,4 @@ cpass.addEventListener("keyup", function(event){
     }
     
 })
+

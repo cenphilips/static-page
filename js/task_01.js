@@ -29,3 +29,9 @@ header.appendChild(nav);
 let table = document.createElement('table')
 table.setAttribute("id", "studentTable")
 document.body.appendChild(table)
+
+
+
+
+
+
