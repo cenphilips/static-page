@@ -16,11 +16,29 @@
     border-radius: 10px;
     padding: 10px;
 }
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-butns{
+    margin: 10px 0;
+}
+.form-butns button{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reg-btn{
+    background-color: #000;
+    color: #fff;
+}
 .form h2{
     text-align: center;
     text-transform: uppercase;
 }
-form{
+.register form{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +52,14 @@ form{
     flex-direction: column;
     justify-content: space-between;
     /* align-items: center; */
+}
+.register{
+    display: block;
+    width: 100%;
+}
+.login{
+    display: none;
+    width: 100%;
 }
 .label label{
     font-size: 16px;

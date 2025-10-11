@@ -7,6 +7,22 @@ let email_msg = document.getElementById("email_err_msg")
 let pass_msg = document.getElementById("pass_err_msg")
 let cpass_msg = document.getElementById('cpass_err_msg')
 
+// forms
+let login_btn = document.getElementById('log-btn')
+let register_btn = document.getElementById('reg-btn')
+let register = document.getElementById('register')
+let login = document.getElementById('login')
+
+login_btn.addEventListener("click", function(){
+  register.style.display = "none"
+  register_btn.style.backgroundColor = "white"
+  register_btn.style.color = 'black'
+  login_btn.style.backgroundColor = "black"
+  login_btn.style.color = "white"
+  login.style.display = "block"
+  
+})
+
 submit_btn.addEventListener("click", function(event){
     event.preventDefault()
     let username = document.forms["registerForm"]["username"].value

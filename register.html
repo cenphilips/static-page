@@ -3,48 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn</title>
+    <title>SignUp/SignIn</title>
     <link rel="stylesheet" href="css/register.css">
     
 </head>
 <body>
     <div class="container">
         <div class="form">
-            <h2>Register</h2>
-            <p id="gmsg"></p>
-            <form action="" name="registerForm">
-                <div class="form-group">
-                    <div class="label">
-                        <label for="username">Username:</label>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Username" name="username">
-                    <span id="user_err_msg"></span>
+            <div class="form-butns">
+                <button class="reg-btn" id="reg-btn">Register</button>
+                <button class="log-btn" id="log-btn">Login</button>
+            </div>
+            <div class="form-container">
+                <div class="register" id="register">
+                    <h2>Register</h2>
+                    <p id="gmsg"></p>
+                    <form action="" name="registerForm">
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="username">Username:</label>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username" name="username">
+                            <span id="user_err_msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="email">Email:</label>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <span id="email_err_msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="password">Password:</label>
+                            </div>
+                            <input type="password" id="pass" class="form-control" placeholder="Password" name="password">
+                            <span id="pass_err_msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="cpassword">Confirm Password:</label>
+                            </div>
+                            <input type="password" id="cpass" class="form-control" placeholder="Confirm Password" name="cpassword">
+                            <span id="cpass_err_msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit" class="form-control">Sign up</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label for="email">Email:</label>
-                    </div>
-                    <input type="email" class="form-control" placeholder="Email" name="email">
-                    <span id="email_err_msg"></span>
+                <div class="login" id="login">
+                    <h2>Login</h2>
+                    <p id="lgmsg"></p>
+                    <form action="" name="LoginForm">
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="email">Email:</label>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <span id="email_err_msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="password">Password:</label>
+                            </div>
+                            <input type="password" id="pass" class="form-control" placeholder="Password" name="password">
+                            <span id="pass_err_msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit" class="form-control">Sign In</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label for="password">Password:</label>
-                    </div>
-                    <input type="password" id="pass" class="form-control" placeholder="Password" name="password">
-                    <span id="pass_err_msg"></span>
-                </div>
-                <div class="form-group">
-                    <div class="label">
-                        <label for="cpassword">Confirm Password:</label>
-                    </div>
-                    <input type="password" id="cpass" class="form-control" placeholder="Confirm Password" name="cpassword">
-                    <span id="cpass_err_msg"></span>
-                </div>
-                <div class="form-group">
-                    <button type="submit" id="submit" class="form-control">Sign up</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
     <script src="js/register.js"></script>
