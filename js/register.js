@@ -23,6 +23,15 @@ login_btn.addEventListener("click", function(){
   
 })
 
+register_btn.addEventListener("click", function(){
+  login.style.display = "none"
+  login_btn.style.backgroundColor = "white"
+  login_btn.style.color = "black"
+  register_btn.style.color = "white"
+  register_btn.style.backgroundColor = "black"
+  register.style.display = "block"
+})
+
 submit_btn.addEventListener("click", function(event){
     event.preventDefault()
     let username = document.forms["registerForm"]["username"].value
