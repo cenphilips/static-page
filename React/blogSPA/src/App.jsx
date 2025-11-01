@@ -20,6 +20,7 @@ function App() {
      <button onClick={() => setName("Ikenna")} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded'>Reset name</button>
       <Services />
       <Contact phoneNumber="123-456-7890" gender="male" />
+      <About num1={15} num2={10} greet="Hello" name="Ikenna" />
     </>
   )
 }

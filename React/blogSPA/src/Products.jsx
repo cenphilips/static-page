@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Products = () => {
+const Products = (props) => {
   return (
-    <div>This is our Products page</div>
+    <div>
+      <h1>This is our Products page</h1>
+      <div>{props.children}</div>
+    </div>
   )
 }
 
