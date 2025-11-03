@@ -1,26 +1,26 @@
-import { useState } from 'react'
 import About from './About'
 import Products from './Products'
 import Contact from './Contact'
 import Services from './Services'
-
+import Nav from './Nav'
+import { Routes, Route } from 'react-router-dom'
+import Footer from './Footer'
+import Home from './Home'
 
 
 function App() {
-  const [name, setName] = useState("Ikenna")
 
-  const callSetName = () => {
-    setName("Remigius")
-  }
   return (
     <>
-     <h1 className='text-3xl bg-black text-white text-center'>Welcome to React class</h1>
-     <p>My name is {name}</p>
-     <button onClick={callSetName} className='bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-4 rounded mr-2'>Change name</button>
-     <button onClick={() => setName("Ikenna")} className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded'>Reset name</button>
-      <Services />
-      <Contact phoneNumber="123-456-7890" gender="male" />
-      <About num1={15} num2={10} greet="Hello" name="Ikenna" />
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+      <Footer />
     </>
   )
 }
