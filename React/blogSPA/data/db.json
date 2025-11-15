@@ -68,5 +68,71 @@
             "credits": 4
         }
 
+    ],
+    "Products": [
+        {
+            "id": 1,
+            "Name": "Wall tiles",
+            "Price": "$10",
+            "Vendor": "Home Depot"
+        },
+        {
+            "id": 2,
+            "Name": "Satchel bags",
+            "Price": "$50",
+            "Vendor": "Fossil"
+        },
+        {
+            "id": 3,
+            "Name": "Smartwatches",
+            "Price": "$150",
+            "Vendor": "Samsung"
+        
+        },
+        {
+            "id": 4,
+            "Name": "Matcha",
+            "Price": "$15",
+            "Vendor": "Amazon"
+        },
+        {
+            "id": 5,
+            "Name": "Portable Blenders",
+            "Price": "$30",
+            "Vendor": "BlendJet"
+        },
+        {
+            "id": 6,
+            "Name": "Printable Fabric",
+            "Price": "$20",
+            "Vendor": "Joann"
+                
+        },
+        {
+            "id": 7,
+            "Name": "Sports trading cards",
+            "Price": "$10",
+            "Vendor": "Panini"
+        },
+        {
+            "id": 8,
+            "Name": "Hoodies",
+            "Price": "$40",
+            "Vendor": "Adidas"
+        },
+        {
+            "id": 9,
+            "Name": "Energy Drinks",
+            "Price": "$2",
+            "Vendor": "Monster"
+                
+        },
+        {
+            "id": 10,
+            "Name": "Hair Oil",
+            "Price": "$15",
+            "Vendor": "Moroccanoil"
+                
+        }                         
     ]
 }
