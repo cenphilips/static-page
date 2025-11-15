@@ -72,67 +72,66 @@
     "Products": [
         {
             "id": 1,
-            "Name": "Wall tiles",
-            "Price": "$10",
-            "Vendor": "Home Depot"
+            "name": "Wall tiles",
+            "price": "$10",
+            "vendor": "Home Depot"
         },
         {
             "id": 2,
-            "Name": "Satchel bags",
-            "Price": "$50",
-            "Vendor": "Fossil"
+            "name": "Satchel bags",
+            "price": "$50",
+            "vendor": "Fossil"
         },
         {
             "id": 3,
-            "Name": "Smartwatches",
-            "Price": "$150",
-            "Vendor": "Samsung"
+            "name": "Smartwatches",
+            "price": "$150",
+            "vendor": "Samsung"
         
         },
         {
             "id": 4,
-            "Name": "Matcha",
-            "Price": "$15",
-            "Vendor": "Amazon"
+            "name": "Matcha",
+            "price": "$15",
+            "vendor": "Amazon"
         },
         {
             "id": 5,
-            "Name": "Portable Blenders",
-            "Price": "$30",
-            "Vendor": "BlendJet"
+            "name": "Portable Blenders",
+            "price": "$30",
+            "vendor": "BlendJet"
         },
         {
             "id": 6,
-            "Name": "Printable Fabric",
-            "Price": "$20",
-            "Vendor": "Joann"
+            "name": "Printable Fabric",
+            "price": "$20",
+            "vendor": "Joann"
                 
         },
         {
             "id": 7,
-            "Name": "Sports trading cards",
-            "Price": "$10",
-            "Vendor": "Panini"
+            "name": "Sports trading cards",
+            "price": "$10",
+            "vendor": "Panini"
         },
         {
             "id": 8,
-            "Name": "Hoodies",
-            "Price": "$40",
-            "Vendor": "Adidas"
+            "name": "Hoodies",
+            "price": "$40",
+            "vendor": "Adidas"
         },
         {
             "id": 9,
-            "Name": "Energy Drinks",
-            "Price": "$2",
-            "Vendor": "Monster"
+            "name": "Energy Drinks",
+            "price": "$2",
+            "vendor": "Monster"
                 
         },
         {
             "id": 10,
-            "Name": "Hair Oil",
-            "Price": "$15",
-            "Vendor": "Moroccanoil"
-                
+            "name": "Hair Oil",
+            "price": "$15",
+            "vendor": "Moroccanoil"               
         }                         
     ]
 }
