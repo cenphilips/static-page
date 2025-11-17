@@ -6,6 +6,7 @@ import Nav from './Nav'
 import { Routes, Route } from 'react-router-dom'
 import Footer from './Footer'
 import Home from './Home'
+import AddStudent from './AddStudent'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/add-student' element={<AddStudent />} />
       </Routes>
       <Footer />
     </>

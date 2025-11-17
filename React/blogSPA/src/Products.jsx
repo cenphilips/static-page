@@ -7,7 +7,12 @@ const Products = (props) => {
 
 useEffect(() => {
         fetch("http://localhost:3000/Products")
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Network response was not ok'); 
+          }
+          return res.json();
+        })
         .then((data) => setProducts(data))
         .catch((err) => console.log(err));
 }, [])

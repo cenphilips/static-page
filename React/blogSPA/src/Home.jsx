@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [count, setCount] = useState(0)
   const [students, setStudents] = useState([])
 
-
   useEffect(() => {
-    fetch("http://localhost:3000/Students")
-      .then((res) => res.json())
+    fetch('http://localhost:3000/Students')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return res.json()
+      })
       .then((data) => setStudents(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }, [])
   return (
     <div className=''>
@@ -36,6 +41,14 @@ const Home = () => {
             </button>
           </div>
           <div className='mt-10 w-full p-10'>
+            <div>
+              <Link
+                to='/add-student'
+                className='text-blue-500 mb-1 inline-block border-2 rounded-lg px-4 py-2'
+              >
+                + Add Student
+              </Link>
+            </div>
             <table className='table-auto w-full border-collapse border border-gray-400'>
               <thead className='px-4 py-2 bg-gray-200 border'>
                 <tr>
@@ -44,6 +57,7 @@ const Home = () => {
                   <th className='px-4 py-2'>Last Name</th>
                   <th className='px-4 py-2'>Age</th>
                   <th className='px-4 py-2'>Major</th>
+                  <th className='px-4 py-2'>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -54,6 +68,12 @@ const Home = () => {
                     <td className='border px-4 py-2'>{student.lastname}</td>
                     <td className='border px-4 py-2'>{student.age}</td>
                     <td className='border px-4 py-2'>{student.major}</td>
+                    <td className='border px-4 py-2'>
+                      <button>Update</button>
+                    </td>
+                    <td className='border px-4 py-2'>
+                      <button>Delete</button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
