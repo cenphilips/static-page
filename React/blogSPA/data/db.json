@@ -1,35 +1,35 @@
 {
   "Students": [
     {
-      "id": 1,
+      "id": "1",
       "firstname": "Alice",
       "lastname": "Johnson",
       "age": 20,
       "major": "Computer Science"
     },
     {
-      "id": 2,
+      "id": "2",
       "firstname": "Bob",
       "lastname": "Smith",
       "age": 22,
       "major": "Mathematics"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstname": "Charlie",
       "lastname": "Brown",
       "age": 19,
       "major": "Physics"
     },
     {
-      "id": 4,
+      "id": "4",
       "firstname": "Diana",
       "lastname": "Prince",
       "age": 21,
       "major": "History"
     },
     {
-      "id": 5,
+      "id": "5",
       "firstname": "Ethan",
       "lastname": "Hunt",
       "age": 23,
@@ -48,35 +48,42 @@
       "lastname": "Egwu",
       "age": 29,
       "major": "Micro Biology"
+    },
+    {
+      "id": "f67d",
+      "firstname": "Amaka",
+      "lastname": "Okafor",
+      "age": 28,
+      "major": "Computer Science"
     }
   ],
   "Courses": [
     {
-      "id": 1,
+      "id": "1",
       "code": "CS101",
       "title": "Introduction to Computer Science",
       "credits": 3
     },
     {
-      "id": 2,
+      "id": "2",
       "code": "MATH201",
       "title": "Calculus I",
       "credits": 4
     },
     {
-      "id": 3,
+      "id": "3",
       "code": "PHYS150",
       "title": "General Physics",
       "credits": 4
     },
     {
-      "id": 4,
+      "id": "4",
       "code": "HIST210",
       "title": "World History",
       "credits": 3
     },
     {
-      "id": 5,
+      "id": "5",
       "code": "CHEM110",
       "title": "Organic Chemistry",
       "credits": 4
@@ -84,64 +91,70 @@
   ],
   "Products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Wall tiles",
       "price": "$10",
       "vendor": "Home Depot"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Satchel bags",
       "price": "$50",
       "vendor": "Fossil"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Smartwatches",
       "price": "$150",
       "vendor": "Samsung"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Matcha",
       "price": "$15",
       "vendor": "Amazon"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Portable Blenders",
       "price": "$30",
       "vendor": "BlendJet"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Printable Fabric",
       "price": "$20",
       "vendor": "Joann"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Sports trading cards",
       "price": "$10",
       "vendor": "Panini"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Hoodies",
       "price": "$40",
       "vendor": "Adidas"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Energy Drinks",
       "price": "$2",
       "vendor": "Monster"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Hair Oil",
       "price": "$15",
       "vendor": "Moroccanoil"
+    },
+    {
+      "id": "e802",
+      "name": "Toyota Camry",
+      "price": "$15,000",
+      "vendor": "Toyota Group"
     }
   ]
 }

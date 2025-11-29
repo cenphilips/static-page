@@ -57,7 +57,7 @@ const Home = () => {
                   <th className='px-4 py-2'>Last Name</th>
                   <th className='px-4 py-2'>Age</th>
                   <th className='px-4 py-2'>Major</th>
-                  <th className='px-4 py-2'>Action</th>
+                  <th className='px-4 py-2' colSpan={2}>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -68,11 +68,11 @@ const Home = () => {
                     <td className='border px-4 py-2'>{student.lastname}</td>
                     <td className='border px-4 py-2'>{student.age}</td>
                     <td className='border px-4 py-2'>{student.major}</td>
-                    <td className='border px-4 py-2'>
-                      <button>Update</button>
+                    <td className='border px-4 py-2' >
+                      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Update</button>
                     </td>
                     <td className='border px-4 py-2'>
-                      <button>Delete</button>
+                      <button className='bg-red-500 hover:bg-red-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Delete</button>
                     </td>
                   </tr>
                 ))}
