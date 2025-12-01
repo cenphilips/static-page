@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Home = () => {
   const [count, setCount] = useState(0)
   const [students, setStudents] = useState([])
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch('http://localhost:3000/Students')
@@ -16,6 +17,10 @@ const Home = () => {
       .then((data) => setStudents(data))
       .catch((err) => console.log(err))
   }, [])
+
+  const navigateStudent = (id) => {
+    navigate(`/update-student/${id}`)
+  }
   return (
     <div className=''>
       <div className='my-5'>
@@ -69,7 +74,7 @@ const Home = () => {
                     <td className='border px-4 py-2'>{student.age}</td>
                     <td className='border px-4 py-2'>{student.major}</td>
                     <td className='border px-4 py-2' >
-                      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Update</button>
+                      <button onClick={() => navigateStudent(student.id)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Update</button>
                     </td>
                     <td className='border px-4 py-2'>
                       <button className='bg-red-500 hover:bg-red-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Delete</button>

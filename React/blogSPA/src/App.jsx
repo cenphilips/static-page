@@ -8,6 +8,7 @@ import Footer from './Footer'
 import Home from './Home'
 import AddStudent from './AddStudent'
 import AddProduct from './AddProduct'
+import UpdateStudent from './UpdateStudent'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/add-student' element={<AddStudent />} />
         <Route path='/add-product' element={<AddProduct />} />
+        <Route path='/update-student/:id' element={<UpdateStudent />} />
       </Routes>
       <Footer />
     </>

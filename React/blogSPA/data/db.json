@@ -1,18 +1,18 @@
 {
   "Students": [
     {
-      "id": "1",
-      "firstname": "Alice",
+      "firstname": "Chidimma",
       "lastname": "Johnson",
       "age": 20,
-      "major": "Computer Science"
+      "major": "Computer Science",
+      "id": "1"
     },
     {
-      "id": "2",
-      "firstname": "Bob",
+      "firstname": "James",
       "lastname": "Smith",
       "age": 22,
-      "major": "Mathematics"
+      "major": "Mathematics",
+      "id": "2"
     },
     {
       "id": "3",
