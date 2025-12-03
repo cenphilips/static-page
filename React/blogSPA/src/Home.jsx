@@ -21,6 +21,23 @@ const Home = () => {
   const navigateStudent = (id) => {
     navigate(`/update-student/${id}`)
   }
+
+  const handleDeleteStudent = (id) => {
+    const confirmDelete = confirm('Are you sure you want to delete this student?')
+    if (confirmDelete) {
+      fetch(`http://localhost:3000/Students/${id}`, {
+        method: 'DELETE',
+      })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok')
+        }
+        window.location.reload()
+      })
+      .catch((err) => console.log(err))
+    }
+
+  }
   return (
     <div className=''>
       <div className='my-5'>
@@ -77,7 +94,7 @@ const Home = () => {
                       <button onClick={() => navigateStudent(student.id)} className='bg-blue-500 hover:bg-blue-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Update</button>
                     </td>
                     <td className='border px-4 py-2'>
-                      <button className='bg-red-500 hover:bg-red-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Delete</button>
+                      <button onClick={() => handleDeleteStudent(student.id)} className='bg-red-500 hover:bg-red-700 text-white font-bold text-sm rounded px-3 py-1 cursor-pointer'>Delete</button>
                     </td>
                   </tr>
                 ))}

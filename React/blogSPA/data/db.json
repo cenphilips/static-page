@@ -41,20 +41,6 @@
       "lastname": "Okeke",
       "age": 27,
       "major": "Biochemistry"
-    },
-    {
-      "id": "3d1b",
-      "firstname": "Chinelo",
-      "lastname": "Egwu",
-      "age": 29,
-      "major": "Micro Biology"
-    },
-    {
-      "id": "f67d",
-      "firstname": "Amaka",
-      "lastname": "Okafor",
-      "age": 28,
-      "major": "Computer Science"
     }
   ],
   "Courses": [
