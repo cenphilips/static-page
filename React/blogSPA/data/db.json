@@ -29,11 +29,11 @@
       "major": "History"
     },
     {
-      "id": "5",
       "firstname": "Ethan",
-      "lastname": "Hunt",
+      "lastname": "Ojisilike",
       "age": 23,
-      "major": "Chemistry"
+      "major": "Chemistry",
+      "id": "5"
     },
     {
       "id": "9173",
