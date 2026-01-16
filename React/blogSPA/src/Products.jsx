@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useAuthContext } from './hooks/useAuthContext'
+import { useNavigate } from 'react-router-dom'
 
 
 const Products = (props) => {
 
   const [products, setProducts] = useState([])
+  const { user, theme } = useAuthContext()
+  const navigate = useNavigate()
+
+  if(!user){
+    navigate('/')
+  }
 
 useEffect(() => {
         fetch("http://localhost:3000/Products")

@@ -1,11 +1,15 @@
 import React from 'react'
 import { addNum, multiplyNum } from './helper'
+import { useAuthContext } from './hooks/useAuthContext'
 
 const About = (props) => {
+  const { user, theme } = useAuthContext()
   const { num1, num2, ...rest } = props
   const sum = addNum(num1, num2)
   const product = multiplyNum(num1, num2)
   let isMember = false
+  console.log('User from context:', user)
+  console.log('Theme from context:', theme)
   const students = [
     {name: 'Ikenna', member: true},
     {name: 'Remigius', member: false},

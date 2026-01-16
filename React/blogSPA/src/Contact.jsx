@@ -5,6 +5,7 @@ export default class Contact extends Component {
     super(props)
     this.state = {color: 'red', size: '20px', fontWeight: 'bold'}
     console.log(props)
+
   }
   render() {
     return (
