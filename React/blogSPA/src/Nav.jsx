@@ -14,6 +14,7 @@ const Nav = () => {
                 <li className='px-6 py-2 text-gray-300 hover:text-white rounded-md text-lg font-medium'><Link to="/services">Services</Link></li>
                 <li className='px-6 py-2 text-gray-300 hover:text-white rounded-md text-lg font-medium'><Link to="/contact">Contact</Link></li>
                 <li className='px-6 py-2 text-gray-300 hover:text-white rounded-md text-lg font-medium'><Link to="/products">Products</Link></li>
+                <li className='px-6 py-2 text-gray-300 hover:text-white rounded-md text-lg font-medium'><Link to="/pages/Login">Login</Link></li>
             </ul>
         </div>
     </div>

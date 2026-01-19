@@ -10,6 +10,9 @@ import AddStudent from './AddStudent'
 import AddProduct from './AddProduct'
 import UpdateStudent from './UpdateStudent'
 
+import Login from './pages/login'
+import Register from './pages/Register'
+
 
 function App() {
 
@@ -25,6 +28,8 @@ function App() {
         <Route path='/add-student' element={<AddStudent />} />
         <Route path='/add-product' element={<AddProduct />} />
         <Route path='/update-student/:id' element={<UpdateStudent />} />
+        <Route path='/pages/login' element={<Login />} />
+        <Route path='/pages/register' element={<Register />} />
       </Routes>
       <Footer />
     </>
