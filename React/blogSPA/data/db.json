@@ -41,6 +41,16 @@
       "lastname": "Okeke",
       "age": 27,
       "major": "Biochemistry"
+    },
+    {
+      "id": "c703",
+      "username": "ikenna123",
+      "firstname": "Ikenna",
+      "lastname": "Ezeanyaeji",
+      "email": "ikenna@gmail.com",
+      "age": 27,
+      "major": "computer-science",
+      "password": "password"
     }
   ],
   "Courses": [
