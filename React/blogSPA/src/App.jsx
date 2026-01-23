@@ -12,11 +12,16 @@ import UpdateStudent from './UpdateStudent'
 
 import Login from './pages/login'
 import Register from './pages/Register'
+import { Queryclient, QueryClientProvider } from '@tanstack/react-query'
+
+//create a client
+const queryClient = new QueryClient()
 
 
 function App() {
 
   return (
+    <QueryClientProvider client={queryClient}>
     <>
       <Nav />
       <Routes>
@@ -33,6 +38,7 @@ function App() {
       </Routes>
       <Footer />
     </>
+    </QueryClientProvider>
   )
 }
 
