@@ -12,7 +12,8 @@ import UpdateStudent from './UpdateStudent'
 
 import Login from './pages/login'
 import Register from './pages/Register'
-import { Queryclient, QueryClientProvider } from '@tanstack/react-query'
+import ClientTest from './ClientTest'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 //create a client
 const queryClient = new QueryClient()
@@ -35,6 +36,7 @@ function App() {
         <Route path='/update-student/:id' element={<UpdateStudent />} />
         <Route path='/pages/login' element={<Login />} />
         <Route path='/pages/register' element={<Register />} />
+        <Route path='/client-test' element={<ClientTest />} />
       </Routes>
       <Footer />
     </>
