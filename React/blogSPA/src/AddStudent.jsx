@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import postData from './pages/postData'
 
 const AddStudent = () => {
   const [firstName, setFirstName] = useState('')
@@ -9,6 +10,7 @@ const AddStudent = () => {
   const [errMsg, setErrMsg] = useState('')
   const [succ, setSucc] = useState('')
   const navigate = useNavigate()
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,17 +25,7 @@ const AddStudent = () => {
                 age,
                 major
             };
-            const res = await fetch('http://localhost:3000/Students', { 
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(newStudent)
-            })
-            if(!res.ok) {
-                throw new Error("Failed to add user")
-            }
-            // const data = await res.json();
+            await postData('http://localhost:3000/Students', newStudent);
             setSucc('Student added successfully');
             setTimeout(() => {
                 navigate('/')
@@ -44,6 +36,7 @@ const AddStudent = () => {
         setErrMsg(`Error: ${error.message}`)
     }
   }
+
 
   return (
     <div className='h-screen'>
