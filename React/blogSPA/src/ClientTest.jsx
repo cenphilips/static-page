@@ -23,7 +23,7 @@ const ClientTest = () => {
   return (
     <div>
       <h2>Client Test Component</h2>
-      {isLoading && <p>Loading user data...</p>}
+      {isLoading && <p>gif...</p>}
       {error && <p>Error fetching data: {error.message}</p>}
       {data && (
         <div>
