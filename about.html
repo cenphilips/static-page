@@ -1,10 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS DOM</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            /*Detect current language (works with Moodle's lang attribute on <html>)*/
+            const isFrench = document.documentElement.lang.startsWith('fr');
+
+            /* ────────────────────────────────────────────────
+            * 1. Course Progress heading
+            * ──────────────────────────────────────────────── */
+            const progressHeadings = document.querySelectorAll(
+                '.edwiser-courseprogress h3.section-heading, ' +
+                '.course-progress-text h3, ' +
+                'h3[data-asw-orgfontsize], ' +
+                '.edwiser-courseprogress .section-heading'
+            );
+
+            progressHeadings.forEach(heading => {
+                const text = heading.textContent.trim();
+                /* Only touch it if it looks like our title (exclude Analytics) */
+                if (text === '' || text.includes('Course Progress') || text.includes('Progrès du cours')) {
+                    const icon = heading.querySelector('i');
+                    const iconHTML = icon ? icon.outerHTML : '<i class="fas fa-chart-line"></i>';
+                    heading.innerHTML = isFrench
+                        ? iconHTML + ' Progrès du cours'
+                        : iconHTML + ' Course Progress';
+                }
+            });
+
+            /* ────────────────────────────────────────────────
+            * 2. Todo List heading
+            * ──────────────────────────────────────────────── */
+            const todoHeadings = document.querySelectorAll(
+                'div.todo div.todo-text, ' +
+                '.todo-text, ' +
+                '.progress-analytics-todo h3, ' +
+                '.new-todo-do-content ~ .todo-text, ' +
+                '[class*="todo"] [style*="padding: 24px"]'
+            );
+
+            todoHeadings.forEach(element => {
+                const currentText = element.textContent.trim();
+                if (currentText === 'Todo List' || currentText === 'To-do List' || currentText === 'Liste de tâches' || currentText.includes('Todo') || currentText.includes('To-do') || currentText.includes('Tâches') ||
+                    currentText === '') {
+                    const icon = element.querySelector('i');
+                    const iconHTML = icon ? icon.outerHTML : '<i class="fa-sharp fa-solid fa-pen-to-square""></i>';
+                    element.innerHTML = isFrench
+                        ? iconHTML + ' Liste de tâches'
+                        : iconHTML + ' To-do List';
+                }
+            });
+
+            /* ────────────────────────────────────────────────
+            * 3. Course Analytics heading
+            * ──────────────────────────────────────────────── */
+            const analyticsHeadings = document.querySelectorAll(
+                '.course-analytics-header, ' +
+                'h3.section-heading[data-asw-orgfontsize]'
+            );
+
+            analyticsHeadings.forEach(heading => {
+                const text = heading.textContent.trim();
+                /* Only touch if it's Course Analytics */
+                if (text.includes('Course Analytics') || text.includes('Analytique du cours')) {
+                    const icon = heading.querySelector('i');
+                    const iconHTML = icon ? icon.outerHTML : '<i class="fas fa-chart-line" style="color: #0D6EFD; margin-right: 5px;"></i>';
+                    heading.innerHTML = isFrench
+                        ? iconHTML + ' Analytique du cours'
+                        : iconHTML + ' Course Analytics';
+                }
+            });
+
+            /* ────────────────────────────────────────────────
+            * 4. Recent Feedback heading
+            * ──────────────────────────────────────────────── */
+            const feedbackHeadings = document.querySelectorAll(
+                '.recent-feedback-text'
+            );
+
+            feedbackHeadings.forEach(element => {
+                const text = element.textContent.trim();
+                if (text.includes('Recent Feedback') || text.includes('Commentaires récents')) {
+                    const icon = element.querySelector('i');
+                    const iconHTML = icon ? icon.outerHTML : '<i class="fas fa-calendar-week"></i>';
+                    element.innerHTML = isFrench
+                        ? iconHTML + ' Commentaires récents'
+                        : iconHTML + ' Recent Feedback';
+                }
+            });
+
+            /* ────────────────────────────────────────────────
+            * 5. Enrolled Users heading
+            * ──────────────────────────────────────────────── */
+            const enrolledHeadings = document.querySelectorAll(
+                '.enrolled-users-text'
+            );
+
+            enrolledHeadings.forEach(element => {
+                const text = element.textContent.trim();
+                if (text.includes('Enrolled Users') || text.includes('Utilisateurs inscrits')) {
+                    const icon = element.querySelector('i');
+                    const iconHTML = icon ? icon.outerHTML : '<i class="fa-sharp fa-solid fa-users"></i>';
+                    element.innerHTML = isFrench
+                        ? iconHTML + ' Utilisateurs inscrits'
+                        : iconHTML + ' Enrolled Users';
+                }
+            });
+
+        });
+    </script>
 </head>
+
 <body>
     <p id="demo"></p>
 
@@ -12,7 +123,7 @@
         let h1 = document.createElement("h1")
         h1.setAttribute('id', "heading")
         document.body.appendChild(h1)
-        h1.onclick = function (){
+        h1.onclick = function () {
             alert("The heading was clicked!")
         }
         document.getElementById('heading').innerHTML = "This is my heading";
@@ -23,4 +134,5 @@
         document.write("Hello, world")
     </script>
 </body>
+
 </html>
