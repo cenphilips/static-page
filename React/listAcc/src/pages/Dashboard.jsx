@@ -1,9 +1,11 @@
 import { Play, RefreshCcw } from "lucide-react";
+import DashboardCards from "../components/dashComp/DashboardCards"
+import ActiveClasses from "../components/dashComp/ActiveClasses"
 
 
 function Dashboard() {
     return (
-        <div className="space-y-6">
+        <div className="space-y-8 overflow-y-auto">
 
             {/* Welcome Header */}
             <div className="flex items-center justify-between">
@@ -33,6 +35,12 @@ function Dashboard() {
                 </div>
             </div>
 
+            {/* Dashboard Cards*/}
+            <DashboardCards />
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <ActiveClasses />
+            </div>
         </div>
     );
   }
