@@ -1,25 +1,31 @@
-const http = require('http');
+const express = require('express');
+const db = require('./config/db');
+require('dotenv').config();
 
-const server = http.createServer((req, res) => {
-    const url = req.url;
-    const method = req.method;
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-    res.setHeader('Content-Type', 'text/plain');
+// Middleware to parse JSON bodies
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-    if (url === '/' && method === 'GET') {
-        res.statusCode = 200;
-        res.end(JSON.stringify({ message: 'Welcome to the Home Page!' }));
-    }
-    else if (url === '/about' && method === 'GET') {
-        res.statusCode = 200;
-        res.end(JSON.stringify({ message: 'This is the About Page.' }));
-    }
-    else {
-        res.statusCode = 404;
-        res.end(JSON.stringify({ message: 'Page Not Found' }));
-    }
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Welcome to the Home Page!' });
 });
 
-server.listen(3000, () => {
-    console.log('Server running at http://localhost:3000/');
+app.use((req, res, next) => {
+    console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+    next();
+});
+
+app.get('/about', (req, res) => {
+    res.status(200).json({ message: 'This is the About Page.' });
+});
+
+app.use((req, res) => {
+    res.status(404).json({ message: 'Page Not Found' });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}/`);
 });
