@@ -26,7 +26,7 @@ function SideBar(){
 
     return (
 
-        <aside className="fixed h-screen w-68 bg-[#1a1a1a] border-r border-[#2e2e2e] flex flex-col overflow-y-auto pb-4">
+        <aside className="fixed h-screen w-68 bg-[#1a1a1a] border-r border-[#2e2e2e] flex flex-col pb-8">
 
             {/* User Info */}
             <div className="p-4">
@@ -43,9 +43,9 @@ function SideBar(){
             <div className="border-b border-[#4f4f4f]"></div>
 
             {/* Main Menu */}
-            <nav className="flex flex-col h-full pt-2 px-3">
+            <nav className="flex flex-col h-full pt-2">
                 {/* Top */}
-                <div className="flex-1 overflow-y-auto space-y-1 ">
+                <div className="flex-1 space-y-1 px-3">
                     <SidebarItem icon={LayoutGrid} label="Dashboard" active/>
                     <SidebarItem icon={BookOpen} label="My Learning"/>
                     <SidebarItem icon={Library} label="My Classes"/>
@@ -56,7 +56,7 @@ function SideBar(){
                 </div>
 
                 {/* Bottom */}
-                <div className="space-y-1  pb-3 border-t border-[#4f4f4f]">
+                <div className="space-y-1 px-3 border-t border-[#4f4f4f]">
                     <SidebarItem icon={User} label="Profile"/>
                     <SidebarItem icon={Settings} label="Settings"/>
                     <SidebarItem icon={HelpCircle} label="Help & Support"/>

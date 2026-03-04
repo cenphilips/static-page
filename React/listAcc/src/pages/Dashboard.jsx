@@ -5,7 +5,7 @@ import ActiveClasses from "../components/dashComp/ActiveClasses"
 
 function Dashboard() {
     return (
-        <div className="space-y-8 overflow-y-auto">
+        <div className="space-y-8">
 
             {/* Welcome Header */}
             <div className="flex items-center justify-between">
