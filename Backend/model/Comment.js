@@ -5,7 +5,7 @@ class Comment {
     static async createTable() {
         const query = `CREATE TABLE IF NOT EXISTS comments (
             id SERIAL PRIMARY KEY,
-            body TEXT NOT NULL,
+            content TEXT NOT NULL,
             post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE,
             user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -23,7 +23,7 @@ class Comment {
     //create a new comment
     static async create(commentData) {
         const { content, post_id, user_id } = commentData;
-        const query = `INSERT INTO comments ( body, post_id, user_id) 
+        const query = `INSERT INTO comments ( content, post_id, user_id) 
                        VALUES ($1, $2, $3) RETURNING *`;
         const values = [content, post_id, user_id];
         try {
@@ -86,7 +86,7 @@ class Comment {
     //update comments by id
     static async updateById(id, commentData) {
         const { content } = commentData;
-        const query = `UPDATE comments SET body = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2 RETURNING *`;
+        const query = `UPDATE comments SET content = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2 RETURNING *`;
         const values = [content, id];
         try {
             const result = await db.query(query, values);
@@ -100,7 +100,7 @@ class Comment {
         //update comments by id
     static async updateById(id, commentData) {
         const { content } = commentData;
-        const query = `UPDATE comments SET body = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2 RETURNING *`;
+        const query = `UPDATE comments SET content = $1, updated_at = CURRENT_TIMESTAMP WHERE id = $2 RETURNING *`;
         const values = [content, id];
         try {
             const result = await db.query(query, values);

@@ -57,9 +57,9 @@ class CommentController {
     static async getCommentsByPostId(req, res) {
         try {
             const { post_id } = req.params;
-            const user = await User.getById(post_id);
-            if (!user) {
-                return res.status(404).json({ error: 'User not found' });
+            const post = await Post.getById(post_id);
+            if (!post) {
+                return res.status(404).json({ error: 'Post not found' });
             }
             const comments = await Comment.getByUserId(post_id);
             res.status(200).json(comments);
