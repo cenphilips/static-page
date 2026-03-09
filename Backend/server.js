@@ -7,6 +7,7 @@ const PostRoute = require('./route/PostRoutes')
 const Post = require('./model/Post')
 const CommentRoute = require('./route/CommentRoutes')
 const Comment = require('./model/Comment')
+const AuthRoute = require('./route/AuthRoutes')
 
 const app = express()
 const PORT = process.env.PORT || 8000
@@ -26,6 +27,7 @@ app.use((req, res, next) => {
 app.use('/api/v1', UserRoute)
 app.use('/api/v1', PostRoute)
 app.use('/api/v1', CommentRoute)
+app.use('/api/v1', AuthRoute)
 app.get('/', (req, res) => {
   res.status(200).json({ message: 'Welcome to the Home Page!' })
 })
@@ -59,6 +61,7 @@ app.get('/about', (req, res) => {
 async function startServer() {
   try {
     await User.createTable()
+    await User.alterTableToAddRole()
     await Post.createTable()
     await Comment.createTable()
     console.log('All tables created successfully')

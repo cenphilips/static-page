@@ -9,5 +9,6 @@ router.get('/users/:id', UserController.getUserById);
 router.put('/users/:id', UserController.updateUserById);
 router.delete('/users/:id', UserController.deleteUserById);
 router.get('/users/stats', UserController.getUserStats);
+router.put('/users/:id/role', UserController.makeAdmin);
 
 module.exports = router;

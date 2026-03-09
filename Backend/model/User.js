@@ -21,6 +21,18 @@ class User {
         }
     }
 
+    //alter table to add role column
+    static async alterTableToAddRole() {
+        const query = `ALTER TABLE users ADD COLUMN IF NOT EXISTS role VARCHAR(50) DEFAULT 'user'`;
+        try {
+            await db.query(query);
+            console.log('Role column added to users table successfully');
+        } catch (error) {
+            console.error('Error adding role column to users table:', error);
+            throw error;
+        }
+    }
+
     //create a new user
     static async create(userData) {
         const { firstname, lastname, phone, email, password } = userData;
@@ -119,6 +131,30 @@ class User {
             return result.rows[0];
         } catch (error) {
             console.error('Error fetching user stats:', error);
+            throw error;
+        }
+    }
+
+    // get user by email and password
+    static async getByEmailAndPassword(email, password) {
+        try {
+            const query = `SELECT * FROM users WHERE email = $1 AND password = $2`;
+            const result = await db.query(query, [email, password]);
+            return result.rows[0];
+        } catch (error) {
+            console.error('Error fetching user by email and password:', error);
+            throw error;
+        }
+    }
+
+    //make user admin
+    static async makeAdmin(id) {
+        const query = `UPDATE users SET role = 'admin', updated_at = CURRENT_TIMESTAMP WHERE id = $1 RETURNING *`;
+        try {
+            const result = await db.query(query, [id]);
+            return result.rows[0];
+        } catch (error) {
+            console.error('Error updating user role to admin:', error);
             throw error;
         }
     }

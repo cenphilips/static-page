@@ -104,6 +104,24 @@ class UserController {
       res.status(500).json({ message: 'Internal server error' })
     }
   }
+
+  // make user admin
+  static async makeAdmin(req, res) {
+    try {
+      const { id } = req.params
+      const user = await User.getById(id)
+      if (!user) {
+        return res.status(404).json({ message: 'User not found' })
+      }
+      const updatedUser = await User.makeAdmin(id)
+      res
+        .status(200)
+        .json({ message: 'User role updated to admin successfully', user: updatedUser })
+    } catch (error) {
+      console.error('Error updating user role to admin:', error)
+      res.status(500).json({ message: 'Internal server error' })
+    }
+  }
 }
 
 module.exports = UserController
